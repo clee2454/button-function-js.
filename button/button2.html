@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>button/randomcolor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outer">
+
+        <div id="tablet">
+            <div class="upper"  >
+                <div class="left">
+                    <div id="hours"></div>
+                    <div>:</div>
+                    <div id="minute"></div>
+                    <!-- <div>:</div> -->
+                    <!-- <div id="second"></div> -->
+                </div>
+                <div class="right"><i class='bx bx-wifi' ></i><i class='bx bxs-battery-low'></i></div>
+            </div>
+            <div class="mid" style="color: white;" >
+                <div class="time">
+                    <div id="hours2"></div>
+                    <div>:</div>
+                    <div id="minute2"></div>
+                    
+                </div>
+                <div class="date">
+                    <div id="day">Wed, </div>
+                    <div id="month"> May</div>
+                    <!-- <div ></div> -->
+                    <div id="date"></div>
+                    <!-- <div>  </div> -->
+                    <div id="year">2024</div>
+                </div>
+                <div class="google"></div>
+            </div>
+            <div class="content">
+                <div class="apk">
+                    <button onclick="redbg()" class="red">Redding</button>
+                    <button onclick="greenbg()" class="green">Greening</button>
+                    <button onclick="cyanbg()" class="cyan">Cyaning</button>
+                    <button onclick="yellowbg()" class="yellow">Yellowing</button>
+                    <button onclick="darkbg()" id="dark">dark</button>
+                    <button id="random">Randomizing</button>
+                    <button class="randomapk1" style="background-image: url(zoom.jpeg); background-position: center center; background-size: contain;" >Zoom</button>
+                    <button class="randomapk2" style="background-image: url(gmail.jpeg); background-position: center; background-size: cover; background-repeat: none;" >Gmail</button>
+                    <button class="randomapk3" style="background-image: url(chrome.jpeg); background-position: center center; background-size: contain;" >Chrome</button>
+                    <button class="randomapk4" style="background-image: url(reverse.png); background-position: center center; background-size: contain;" >Reverse: 1999</button>
+                    <button class="randomapk5" style="background-image: url(wa.png); background-position: center center; background-size: contain;" >WhatsApp</button>
+                    <button class="randomapk6" style="background-image: url(ibispaint.png); background-position: center center; background-size: contain;" >Ibispaint x</button>
+                    
+                </div>
+                
+                <div class="reset">
+                    <button onclick="resetbg()" id="reset">
+                        <!-- <i class='bx bx-reset' ></i> -->
+                    </button>
+                    <div class="cam"></div>
+                </div>
+            </div>
+            
+        </div>
+<script>
+    // const time=document.getElementById('time');
+    const time= new Date();
+    document.getElementById('hours').innerHTML=time.getHours()
+    document.getElementById('minute').innerHTML=time.getMinutes()
+    document.getElementById('hours2').innerHTML=time.getHours()
+    document.getElementById('minute2').innerHTML=time.getMinutes()
+
+    document.getElementById('date').innerHTML=time.getDate()
+    // console.log(time.getDate())
+    // console.log(time.getMonth())
+    // document.getElementById('month').innerHTML=time.getMonth()
+    // document.getElementById('year').innerHTML=time.getFullYear()
+    console.log(time.getHours());
+
+
+    //function color button
+    const background=document.getElementById('tablet')
+    //reset
+    function resetbg(){
+        background.style.backgroundImage="url(wallpaper.png)";
+        background.style.transition="ease-in 0.7s"
+    }
+    //red
+    function redbg(){
+            background.style.backgroundImage='none';
+            background.style.backgroundColor= "red";
+            console.log(redbg());
+        }
+        //green
+        const greenbg = function(){
+            background.style.transition="ease-in 0.7s"
+            background.style.backgroundImage='none';
+            background.style.backgroundColor= "green";
+        }
+    //cyan
+        const cyanbg = () => {
+            background.style.backgroundImage='none';
+            background.style.backgroundColor= "cyan";
+        }
+    //yellow
+        const yellowbg = () => {
+            background.style.backgroundImage='none';
+            background.style.backgroundColor= "yellow";
+        }
+
+    
+    document.getElementById("dark").addEventListener('click',() => {
+            background.style.backgroundImage='none';
+            background.style.backgroundColor = "black";
+        })
+
+        function getrandomnumber(num){
+            return Math.floor(Math.random() * num);
+        }
+        function randomcolor(){
+            background.style.backgroundImage='none';
+            let rgb = [getrandomnumber(256),getrandomnumber(256),getrandomnumber(256)];
+            console.log(rgb);
+            background.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+        }
+    //    document.getElementById("random").onclick = randomcolor;
+       document.getElementById("random").addEventListener('click',randomcolor)
+    
+    
+</script>
+</body>
+</html>

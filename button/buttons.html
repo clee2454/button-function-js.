@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        body button{
+            display: inline-block;
+            /* border-radius: 50%; */
+            margin: 10px;
+            width: 100px;
+            height: 60px;
+        }
+        #reset{
+            border: 5px solid gold;
+            box-shadow: 3px 6px 40px 20px;
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: black;
+            color: gold;
+        }
+        .buttom #dark{
+            box-shadow: 5px 5px 100px 20px ;
+        }
+        #random{
+            position: absolute;
+            bottom: 30px;
+            width: 200px;
+            height: 100px;
+            background-image: linear-gradient(red,cyan,yellowgreen);
+            font-size: 30px;
+            box-shadow: 5px 6px 40px 20px #00FFFF;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        const background = document.body;
+        //function dengan cara berbeda beda
+        function redbg(){
+            background.style.backgroundColor= "red";
+        }
+        const greenbg = function(){
+            background.style.backgroundColor= "green";
+        }
+        const cyanbg = () => {
+            background.style.backgroundColor= "cyan";
+        }
+        const pinkbg = () => {
+            background.style.backgroundColor= "pink";
+        }
+        const reset = () =>{
+            background.style.backgroundColor= "#ffffff";
+        }
+        
+        
+    </script>
+    <button id="reset" style="position: absolute ; top: 10px; width: 200px; height: 100px; " ><i class='bx bx-reset ' style="display: inline-block;" ></i>Reset</button>
+    <div class="buttom" style="display: inline-block;" >
+
+        <button onclick="redbg()" style="background-color: red; box-shadow: 5px 5px 100px 20px #FF0000" >REDDING</button>
+        <button onclick="greenbg() " style="background-color: forestgreen; box-shadow: 3px 5px 100px 20px #228B22">GREENING</button>
+        <button onclick="cyanbg()" style="background-color: cyan;box-shadow: 5px 5px 100px 20px #00FFFF" >CYANING</button>
+        <button onclick="pinkbg()" style="background-color: deeppink;box-shadow: 5px 5px 100px 20px #FF1493" >(PINK)</button>
+        
+        <button id= "dark" style="background-color: black; color: white;border: 5px solid black;" >dark</button>
+    </div>
+    <button id="random"  ><i class='bx bxs-color'></i>RANDOM</button>
+    
+
+    <script>
+        document.getElementById("reset").addEventListener('click',reset)
+        
+        document.getElementById("dark").addEventListener('click',() => {
+            background.style.backgroundColor = "black";
+        })
+
+        function getrandomnumber(num){
+            return Math.floor(Math.random() * num);
+        }
+        function randomcolor(){
+            let rgb = [getrandomnumber(256),getrandomnumber(256),getrandomnumber(256)];
+            console.log(rgb);
+            background.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+        }
+    //    document.getElementById("random").onclick = randomcolor;
+       document.getElementById("random").addEventListener('click',randomcolor)
+       
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,208 @@
+*{
+    margin:0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(bedroom.jpg);
+    background-color: white;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: none;
+    width: 190vh;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer{
+    border: 2px solid goldenrod ;
+    border-radius: 20px;
+    height: 90%;
+}
+#tablet{
+    box-shadow: 1px 1px 20px white;
+    border-radius: 20px;
+    /* border:10px goldenrod; */
+    border: 30px solid white;
+    width: 150vh;
+    height: 100% ;
+    /* background-color: salmon; */
+    background-image: url(wallpaper.png);
+    
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+}
+.upper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 10%;
+    width: 100%;
+    color: white;
+}
+.left{
+    display: flex;
+}
+.mid{
+    display: flex;
+    justify-content: center;
+    
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 0.25fr; */
+}
+.mid .time{
+    margin-top: 50px;
+    width: 200px;
+    height: 90px;
+    text-align: center;
+    /* background-color: gray; */
+    /* opacity: 20%; */
+    font-size: 30pt;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    
+    /* gap: -25px; */
+    /* text-align: center; */
+}
+.mid .date{
+    /* background-color: blue; */
+    color: white;
+    display: flex;
+    font-size: 7pt;
+    /* display: inline-flex; */
+    position: absolute;
+    width: 80px;
+    left: 595px;
+    justify-content: space-between;
+    top: 220px
+    
+}
+.content{
+    margin-top: 50px;
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-around;
+    /* background-color: aliceblue; */
+    width: 100%;
+    height: 40%;
+}
+.apk{
+    color: white;
+    width: 80%;
+    padding-top: 20px;
+    height: 100%;
+    display: grid;
+    /* flex-grow: 50px; */
+    /* flex-basis: 250px; */
+    /* justify-content:space-around; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 70px;
+    /* padding: 70px; */
+    /* flex-wrap: wrap; */
+    /* flex: 1 0 calc(100%/5); */
+    /* background-color: pink; */
+}
+/* .apk:hover{
+    transform: scale(1.2);
+} */
+
+.red{
+    cursor: pointer;
+    color: white;
+    padding-top: 47px;
+    font-size: 8pt;
+    width: 50px;
+    /* padding-bottom: 47px; */
+    border-radius: 15px;
+    height: 50px;
+    background-color: red;
+}
+.red:hover, .green:hover, .yellow:hover, .cyan:hover, #dark:hover, #random:hover{
+    transform: scale(1.2);
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+.green{
+    width: 50px;
+    color: white;
+    padding-top: 47px;
+    font-size: 8pt;
+    border-radius: 15px;
+    height: 50px;
+    background-color: green;
+}
+.cyan{
+    width: 50px;
+    color: white;
+    padding-top: 47px;
+    font-size: 8pt;
+    border-radius: 15px;
+    height: 50px;
+    background-color: cyan;
+}
+.yellow{
+    width: 50px;
+    color: white;
+    padding-top: 47px;
+    font-size: 8pt;
+    border-radius: 15px;
+    height: 50px;
+    background-color:yellow;
+}
+#dark{
+    width: 50px;
+    color: white;
+    padding-top: 47px;
+    font-size: 8pt;
+    border-radius: 15px;
+    height: 50px;
+    background-color: black;
+}
+#random{
+    width: 50px;
+    color: white;
+    padding-top: 47px;
+    font-size: 8pt;
+    border-radius: 15px;
+    height: 50px;
+    /* padding-right: 30px; */
+}
+.randomapk1, .randomapk2, .randomapk3, .randomapk4, .randomapk5, .randomapk6{
+    width: 50px;
+    color: white;
+    padding-top: 47px;
+    font-size: 8pt;
+    border-radius: 15px;
+    height: 50px;
+    margin-bottom: 30px;
+}
+.randomapk1:hover, .randomapk2:hover, .randomapk3:hover, .randomapk4:hover, .randomapk5:hover, .randomapk6:hover{
+    transform: scale(1.2);
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+.reset{
+    text-align: center;
+    position: absolute;
+    /* cursor: pointer; */
+    right: 150px;
+}
+
+#reset{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    /* margin-bottom: 20px; */
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 20pt;
+    color: white;
+    background-color: white;
+}
+.cam{
+    position: absolute;
+    left:150px
+}
